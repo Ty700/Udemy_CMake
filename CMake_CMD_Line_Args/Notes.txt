@@ -1,0 +1,10 @@
+
+Generating a project
+    cmake [<options>] -S <path_to_src> -B <Path_to_build>
+        Example:
+            cmake -S .. -B . //the src path is one higher than the current one, and the build directory is the current one
+
+Assuming that you have already built the CMake project, you can update the project by:
+    cd build
+    cmake .
+

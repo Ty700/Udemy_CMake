@@ -1,0 +1,20 @@
+For example:
+	we have add_library(Library STATIC my_lib.c)
+		- Library is a variable name
+
+	What if I didn't want to remember the spelling of the Library variable?
+
+	In the root CMakeLists.txt we can set a variable name with a value
+
+	set(<var_name> <value>)
+
+	Common to indicate variable names with all uppercase
+	set(LIBRARY_NAME "Library")
+		- we could leave the quotes out and CMake will get the right type since values can be int values
+
+	set(EXECUTABLE_NAME Executable)
+	
+	Now, in the my_lib CMakeLists.txt we can do:
+	add_library($(Library), my_lib.c)
+	 
+	

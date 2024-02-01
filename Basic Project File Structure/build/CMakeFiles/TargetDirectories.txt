@@ -1,0 +1,4 @@
+/home/tyler/cmake_ws/Basic Project File Structure/build/CMakeFiles/Library.dir
+/home/tyler/cmake_ws/Basic Project File Structure/build/CMakeFiles/Executable.dir
+/home/tyler/cmake_ws/Basic Project File Structure/build/CMakeFiles/edit_cache.dir
+/home/tyler/cmake_ws/Basic Project File Structure/build/CMakeFiles/rebuild_cache.dir
