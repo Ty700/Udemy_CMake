@@ -1,0 +1,25 @@
+We don't have to manually edit the version, for example.
+
+We can make a config.hpp.in file.
+    - Anythin with XXX.X.in should be understood that CMake wil grab and config or do something with.
+
+Major 
+    - If increased, version 2.0.0 and 1.X.X are not compatiable
+Minor
+    - New features
+Patch
+    - Bug fixes
+
+Once you have your .in file ready, you can make a MCakeLists.txt with 
+
+configured_file(
+    "config.hpp.in"
+    "${CMAKE_BINARY_DIR}/configured_files/include/config.hpp" ESCAPE_QUOTES
+    #Absoulte path to the binary path is {CMAKE_BINARY_DIR} - this is defined in CMake already
+)
+
+Once you build the CMake it will go to the ${CMAKE_BINARY_DIR}/configured_files/include/config.hpp dir and it will show the update version and whatever is it is configured to show.
+
+Then we can include ${CMAKE_BINARY_DIR}/configured_files/include/config.hpp to the target_include_directories, then in our main we can print out the version of the program! or whatever else.
+
+We we link the config.hpp to the main, we can use the variables we made in it in main. Thus can print out the values. Really cool.
