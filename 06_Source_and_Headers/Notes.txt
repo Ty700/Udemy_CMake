@@ -1,0 +1,29 @@
+In both app and src we have 
+
+add_library()
+
+What if we have a lot? We would need a lot of these to include each header.
+
+So in the src CMakeLists.txt
+
+we can set a variable to represent the library files
+
+set(LIBRARY_SOURCES
+    "my_lib.c"
+    "another_libary.c"
+    "third_library.c")
+
+then set your library headers
+
+set(LIBRARY_HEADERS
+    "my_lib.h"
+    "another_library.h"
+    "third_library.h")
+
+now, instead of having 3 add_library functions, we can just do:
+
+add_library(${LIBRARY_NAME} STATIC
+    ${LIBRARY_SOURCES}
+    ${LIBRARY_HEADERS})
+
+See src/lib CMakeLists.txt for implementation.

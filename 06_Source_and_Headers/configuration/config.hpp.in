@@ -1,0 +1,11 @@
+#pragma once
+
+#include <stdint.h>
+
+//CMake will change things inbetween the @s
+const char *project_name = "@PROJECT_NAME@";
+const char *project_version = "@PROJECT_VERSION@";
+
+const int32_t project_version_major = @PROJECT_VERSION_MAJOR@;
+const int32_t project_version_minor = @PROJECT_VERSION_MINOR@;
+const int32_t project_version_patch = @PROJECT_VERSION_PATCH@;
